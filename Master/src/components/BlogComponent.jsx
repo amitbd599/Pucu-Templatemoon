@@ -90,7 +90,7 @@ const BlogComponent = () => {
                         </div>
                       </div>
                       <div className="mt-[15px]">
-                        <Link to={"/"}>
+                        <Link to={"/blog-details"}>
                           <h2 className="text-center text-[24px] leading-[34px] transition-all duration-300 hover:text-theme">
                             {item.title}
                           </h2>

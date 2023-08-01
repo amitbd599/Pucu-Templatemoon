@@ -27,7 +27,7 @@ const ProjectsComponent = () => {
                   </div>
                   <div className="mb-[10px] mt-[20px]">
                     <p className="text-[16px] text-text">Mobile App Design</p>
-                    <Link to="/">
+                    <Link to="/projects-details">
                       <h2 className="mt-[14px] inline-block text-[30px] leading-[40px] text-btn transition-all duration-300 hover:text-theme dark:text-white dark:hover:text-theme">
                         Mobile Application Landing Page Design
                       </h2>
@@ -48,7 +48,7 @@ const ProjectsComponent = () => {
                     <p className="text-[16px] text-text">
                       Web Design & Development
                     </p>
-                    <Link to="/">
+                    <Link to="/projects-details">
                       <h2 className="mt-[14px] inline-block text-[30px] leading-[40px] text-btn transition-all duration-300 hover:text-theme dark:text-white dark:hover:text-theme">
                         Website Design for Marketing Agency Startup
                       </h2>
@@ -69,7 +69,7 @@ const ProjectsComponent = () => {
                     <p className="text-[16px] text-text">
                       React Native Application
                     </p>
-                    <Link to="/">
+                    <Link to="/projects-details">
                       <h2 className="mt-[14px] inline-block text-[30px] leading-[40px] text-btn transition-all duration-300 hover:text-theme dark:text-white dark:hover:text-theme">
                         Travel App Design Creativity & React native Application
                       </h2>
@@ -88,7 +88,7 @@ const ProjectsComponent = () => {
                   </div>
                   <div className="mb-[10px] mt-[20px]">
                     <p className="text-[16px] text-text">UX / UI Design </p>
-                    <Link to="/">
+                    <Link to="/projects-details">
                       <h2 className="mt-[14px] inline-block text-[30px] leading-[40px] text-btn transition-all duration-300 hover:text-theme dark:text-white dark:hover:text-theme">
                         Project Management System with Admin Panel
                       </h2>
@@ -109,7 +109,7 @@ const ProjectsComponent = () => {
                     <p className="text-[16px] text-text">
                       UI / UX Design Mobile App{" "}
                     </p>
-                    <Link to="/">
+                    <Link to="/projects-details">
                       <h2 className="mt-[14px] inline-block text-[30px] leading-[40px] text-btn transition-all duration-300 hover:text-theme dark:text-white dark:hover:text-theme">
                         Native App Design Creativity with admin panel
                       </h2>
@@ -128,7 +128,7 @@ const ProjectsComponent = () => {
                   </div>
                   <div className="mb-[10px] mt-[20px]">
                     <p className="text-[16px] text-text">UX / UI Design</p>
-                    <Link to="/">
+                    <Link to="/projects-details">
                       <h2 className="mt-[14px] inline-block text-[30px] leading-[40px] text-btn transition-all duration-300 hover:text-theme dark:text-white dark:hover:text-theme">
                         Restaurant Mobile Application Figma Design
                       </h2>
