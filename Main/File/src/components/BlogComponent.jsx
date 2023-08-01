@@ -29,7 +29,7 @@ const BlogComponent = () => {
                   <div className="w-full">
                     <input
                       type="search"
-                      class="w-full rounded-full  px-4 py-1 text-text focus:outline-none"
+                      className="w-full rounded-full  px-4 py-1 text-text focus:outline-none"
                       placeholder="search"
                       x-model="search"
                     />
@@ -47,11 +47,11 @@ const BlogComponent = () => {
                         xmlns="http://www.w3.org/2000/svg"
                       >
                         <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
                           d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                        ></path>
+                        />
                       </svg>
                     </button>
                   </div>
@@ -90,7 +90,7 @@ const BlogComponent = () => {
                         </div>
                       </div>
                       <div className="mt-[15px]">
-                        <Link to={"/"}>
+                        <Link to={"/blog-details"}>
                           <h2 className="text-center text-[24px] leading-[34px] transition-all duration-300 hover:text-theme">
                             {item.title}
                           </h2>

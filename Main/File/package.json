@@ -1,5 +1,5 @@
 {
-  "name": "netgrid-react-portfolio-template",
+  "name": "pucu-react-portfolio-template",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -15,14 +15,11 @@
     "react-helmet": "^6.1.0",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.6.0",
-    "react-lazyload": "^3.2.0",
     "react-on-screen": "^2.1.1",
-    "react-quill": "^2.0.0",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "react-topbar-progress-indicator": "^4.1.1",
     "react-typed": "^1.2.0",
-    "recharts": "^2.7.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

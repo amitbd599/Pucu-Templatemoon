@@ -20,7 +20,7 @@ function App() {
     if (switchDark === null) {
       preToast();
     }
-  }, []);
+  }, [switchDark]);
   return (
     <BrowserRouter>
       <RouteScrollToTop />

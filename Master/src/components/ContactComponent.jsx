@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import { Toaster, toast } from "react-hot-toast";
 const ContactComponent = () => {
   const [success, setSuccess] = useState("");
   const form = useRef();
