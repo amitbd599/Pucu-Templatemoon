@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { BiMenuAltRight } from "react-icons/bi";
+import Fade from "react-reveal/Fade";
+import Flip from "react-reveal/Flip";
 import {
   FaFacebookF,
   FaInstagram,
@@ -124,11 +126,11 @@ const MasterLayout = (props) => {
         <div
           className={
             sidebar
-              ? "sidebar fixed left-0 top-0 z-[999] h-screen w-full bg-btn/60 transition-all duration-500"
-              : "sidebar fixed left-[100%] top-0 z-[999] h-screen w-full bg-btn/60 transition-all duration-500"
+              ? "sidebar fixed left-0 top-0 z-[999] h-full w-full bg-btn/60 transition-all duration-500"
+              : "sidebar fixed left-[100%] top-0 z-[999]  h-full w-full bg-btn/60 transition-all duration-500"
           }
         >
-          <div className="ml-auto h-screen w-[300px] bg-white px-[30px] pt-[60px] dark:bg-card">
+          <div className="ml-auto h-full min-h-[750px] w-[300px] bg-white px-[30px] pt-[60px] dark:bg-card md:min-h-[700px]">
             <div className="relative flex justify-center">
               <button
                 onClick={sidebarControl}
@@ -234,6 +236,18 @@ const MasterLayout = (props) => {
                     Contact
                   </NavLink>
                 </li>
+                <li className=" text-[18px] font-semibold">
+                  <NavLink
+                    className={(navData) =>
+                      navData.isActive
+                        ? "inline-block py-[8px] text-theme dark:text-theme"
+                        : "inline-block py-[8px] text-btn transition-all duration-300 dark:text-white dark:hover:text-theme"
+                    }
+                    to={"/error"}
+                  >
+                    Error
+                  </NavLink>
+                </li>
               </ul>
             </nav>
             <div className="my-[30px] border-t border-[#ddd] dark:border-btn"></div>
@@ -254,7 +268,7 @@ const MasterLayout = (props) => {
                 </div>
               </div>
             </button>
-            <div className="contact absolute bottom-[30px] mt-[10px]">
+            <div className="contact mt-[40px] pb-[20px] md:mt-[0px]">
               <div>
                 <p className="text-[20px] font-semibold text-btn dark:text-white">
                   Follow Me:
@@ -293,74 +307,79 @@ const MasterLayout = (props) => {
               <div className="col-span-12 lg:col-span-3 ">
                 <div className="info-card mt-[60px]">
                   <div className="rounded-[20px] bg-white px-[45px] py-[40px] dark:bg-card">
-                    <div className="relative flex justify-center ">
-                      <img
-                        src="/assets/images/show/ProfileImage.png"
-                        alt=""
-                        className="w-[200px]"
-                      />
-                      <img
-                        src="/assets/images/show/underline.svg"
-                        alt=""
-                        className="absolute bottom-0"
-                      />
-                    </div>
+                    <Fade>
+                      <div className="relative flex justify-center ">
+                        <img
+                          src="/assets/images/show/ProfileImage.png"
+                          alt=""
+                          className="w-[200px]"
+                        />
+                        <img
+                          src="/assets/images/show/underline.svg"
+                          alt=""
+                          className="absolute bottom-0"
+                        />
+                      </div>
+                    </Fade>
+
                     <div>
                       <div className="mt-[25px]">
-                        <div className=" text-center">
-                          <h3 className="text-[24px] text-btn dark:text-white">
-                            Hy! I’m
-                            <span className="text-theme"> Alex Jhohan</span>
-                          </h3>
-                          <p className="text-btn dark:text-white">
-                            JavaScript Developer
-                          </p>
-                          <p className="mt-[25px] text-[14px] text-btn dark:text-white">
-                            admin@demo.com
-                          </p>
-                          <p className="mt-1 text-[14px] text-btn dark:text-white">
-                            +88 889-859-66
-                          </p>
-                          <div className="mt-[30px] flex justify-center gap-3">
-                            <Link to={"/"}>
-                              <button className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
-                                <FaFacebookF />
-                              </button>
-                            </Link>
-                            <Link to={"/"}>
-                              <button className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
-                                <FaTwitter />
-                              </button>
-                            </Link>
-                            <Link to={"/"}>
-                              <button className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
-                                <FaLinkedinIn />
-                              </button>
-                            </Link>
-                            <Link to={"/"}>
-                              <button className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
-                                <FaInstagram />
-                              </button>
-                            </Link>
+                        <Fade>
+                          <div className=" text-center">
+                            <h3 className="text-[24px] text-btn dark:text-white">
+                              Hy! I’m
+                              <span className="text-theme"> Alex Jhohan</span>
+                            </h3>
+                            <p className="text-btn dark:text-white">
+                              JavaScript Developer
+                            </p>
+                            <p className="mt-[25px] text-[14px] text-btn dark:text-white">
+                              admin@demo.com
+                            </p>
+                            <p className="mt-1 text-[14px] text-btn dark:text-white">
+                              +88 889-859-66
+                            </p>
+                            <div className="mt-[30px] flex justify-center gap-3">
+                              <Link to={"/"}>
+                                <button className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
+                                  <FaFacebookF />
+                                </button>
+                              </Link>
+                              <Link to={"/"}>
+                                <button className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
+                                  <FaTwitter />
+                                </button>
+                              </Link>
+                              <Link to={"/"}>
+                                <button className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
+                                  <FaLinkedinIn />
+                                </button>
+                              </Link>
+                              <Link to={"/"}>
+                                <button className="boxShadow rounded-lg bg-white p-[10px] text-[18px] text-text transition duration-300 hover:text-btn dark:bg-btn dark:shadow-none dark:hover:text-theme ">
+                                  <FaInstagram />
+                                </button>
+                              </Link>
+                            </div>
+                            <div className="mt-[30px]">
+                              <Link
+                                to="/contact"
+                                className="block rounded-full border-2 border-theme bg-theme py-[10px] font-medium  text-btn transition-all duration-300 dark:hover:bg-transparent dark:hover:text-theme"
+                              >
+                                Hire Me!
+                              </Link>
+                            </div>
+                            <div className="mt-[20px]">
+                              <a
+                                download
+                                href="assets/pdf/Resume-of-Amit-Biswas-MERN.pdf"
+                                className="block rounded-full border-2 border-btn bg-btn py-[10px] font-medium text-white transition-all duration-300  dark:hover:bg-transparent"
+                              >
+                                Download CV
+                              </a>
+                            </div>
                           </div>
-                          <div className="mt-[30px]">
-                            <Link
-                              to="/contact"
-                              className="block rounded-full border-2 border-theme bg-theme py-[10px] font-medium  text-btn transition-all duration-300 dark:hover:bg-transparent dark:hover:text-theme"
-                            >
-                              Hire Me!
-                            </Link>
-                          </div>
-                          <div className="mt-[20px]">
-                            <a
-                              download
-                              href="assets/pdf/Resume-of-Amit-Biswas-MERN.pdf"
-                              className="block rounded-full border-2 border-btn bg-btn py-[10px] font-medium text-white transition-all duration-300  dark:hover:bg-transparent"
-                            >
-                              Download CV
-                            </a>
-                          </div>
-                        </div>
+                        </Fade>
                       </div>
                     </div>
                   </div>
@@ -374,24 +393,26 @@ const MasterLayout = (props) => {
         </section>
         {/* Footer Section */}
         <footer>
-          <div className="container mx-auto mt-[60px] flex justify-center pb-[40px]">
-            <div>
-              <p className="text-center text-text">
-                Copyright <span className="text-theme">pucu</span> ©2023. All
-                rights reserved
-              </p>
-              <div className="mt-[20px] flex justify-center text-center">
-                <img
-                  src={
-                    dark === "dark"
-                      ? "/assets/images/logo.svg"
-                      : "/assets/images/logo-dark.svg"
-                  }
-                  alt=""
-                />
+          <Fade>
+            <div className="container mx-auto mt-[60px] flex justify-center pb-[40px]">
+              <div>
+                <p className="text-center text-text">
+                  Copyright <span className="text-theme">pucu</span> ©2023. All
+                  rights reserved
+                </p>
+                <div className="mt-[20px] flex justify-center text-center">
+                  <img
+                    src={
+                      dark === "dark"
+                        ? "/assets/images/logo.svg"
+                        : "/assets/images/logo-dark.svg"
+                    }
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
-          </div>
+          </Fade>
         </footer>
       </div>
     </>
