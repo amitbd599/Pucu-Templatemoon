@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Fade from "react-reveal/Fade";
 const ContactComponent = () => {
   const [success, setSuccess] = useState("");
   const form = useRef();
@@ -36,7 +37,7 @@ const ContactComponent = () => {
       <section className=" mt-[60px] ">
         {/* contact Intro */}
         <div className="rounded-xl bg-white p-[30px] dark:bg-card">
-          <div>
+          <Fade>
             <h1 className="text-[42px] leading-[52px] text-btn dark:text-white md:text-[62px] md:leading-[72px]">
               Let’s Chat<span className="text-theme">!</span>
             </h1>
@@ -125,52 +126,56 @@ const ContactComponent = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </Fade>
         </div>
 
         {/* Map section */}
         <div className="mt-[30px] rounded-xl bg-white p-[30px] dark:bg-card">
-          <div className="contact-map">
-            <iframe
-              title="map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29487.110529660204!2d91.78233825630927!3d22.50835433721081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd66e0fc1fe75%3A0x1a5fa83776c97924!2sHathazari!5e0!3m2!1sen!2sbd!4v1689738975067!5m2!1sen!2sbd"
-              height={470}
-              width={"100%"}
-            />
-          </div>
+          <Fade>
+            <div className="contact-map">
+              <iframe
+                title="map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29487.110529660204!2d91.78233825630927!3d22.50835433721081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30acd66e0fc1fe75%3A0x1a5fa83776c97924!2sHathazari!5e0!3m2!1sen!2sbd!4v1689738975067!5m2!1sen!2sbd"
+                height={470}
+                width={"100%"}
+              />
+            </div>
+          </Fade>
         </div>
         {/* contact info */}
-        <div className="mt-[30px] rounded-xl bg-white p-[30px] dark:bg-card">
-          <h2 className="text-[24px] text-btn dark:text-white">
-            Request a quote for work
-          </h2>
-          <div className="mt-[20px] grid gap-[30px] xl:flex xl:gap-[60px]">
-            <div>
-              <p className="text-[14px] text-text">Call for help</p>
-              <p className="mt-[6px] text-[16px] font-medium text-btn dark:text-white">
-                +12 123 456 78
-              </p>
-              <p className="mt-[2px] text-[16px] font-medium text-btn dark:text-white">
-                +88 123 000 88
-              </p>
-            </div>
-            <div>
-              <p className="text-[14px] text-text">Office address</p>
-              <p className="mt-[6px] text-[16px] font-medium text-btn dark:text-white">
-                Aliquam officia dolor rerum
-              </p>
-            </div>
-            <div>
-              <p className="text-[14px] text-text">Email address</p>
-              <p className="mt-[6px] text-[16px] font-medium text-btn dark:text-white">
-                needhelp@yourdomain.com
-              </p>
-              <p className="mt-[2px] text-[16px] font-medium">
-                info@company.com
-              </p>
+        <Fade>
+          <div className="mt-[30px] rounded-xl bg-white p-[30px] dark:bg-card">
+            <h2 className="text-[24px] text-btn dark:text-white">
+              Request a quote for work
+            </h2>
+            <div className="mt-[20px] grid gap-[30px] xl:flex xl:gap-[60px]">
+              <div>
+                <p className="text-[14px] text-text">Call for help</p>
+                <p className="mt-[6px] text-[16px] font-medium text-btn dark:text-white">
+                  +12 123 456 78
+                </p>
+                <p className="mt-[2px] text-[16px] font-medium text-btn dark:text-white">
+                  +88 123 000 88
+                </p>
+              </div>
+              <div>
+                <p className="text-[14px] text-text">Office address</p>
+                <p className="mt-[6px] text-[16px] font-medium text-btn dark:text-white">
+                  Aliquam officia dolor rerum
+                </p>
+              </div>
+              <div>
+                <p className="text-[14px] text-text">Email address</p>
+                <p className="mt-[6px] text-[16px] font-medium text-btn dark:text-white">
+                  needhelp@yourdomain.com
+                </p>
+                <p className="mt-[2px] text-[16px] font-medium">
+                  info@company.com
+                </p>
+              </div>
             </div>
           </div>
-        </div>
+        </Fade>
       </section>
     </>
   );

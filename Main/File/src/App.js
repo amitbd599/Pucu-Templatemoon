@@ -13,7 +13,6 @@ import Error from "./pages/Error";
 import { useEffect } from "react";
 import { preToast } from "./helpers/SessionHelper";
 
-
 function App() {
   let switchDark = localStorage.getItem("switchDark");
   useEffect(() => {
